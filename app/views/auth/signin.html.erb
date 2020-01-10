@@ -1,0 +1,7 @@
+<%= flash[:message] %>
+<%= form_for :auth do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "Login" %>
+<% end %>
+<br /><br /><br /><br />
+<%=link_to "New Account", signup_path%>

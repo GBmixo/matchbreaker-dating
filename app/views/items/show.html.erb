@@ -1,0 +1,9 @@
+<h1>Item <%=@item.id%></h1>
+<ul>
+    <li>Power: <%= @item.power%></li>
+    <li>Speed: <%= @item.speed%></li>
+    
+</ul>
+<%=link_to "Back", items_path%><br /><br />
+<%=link_to "Take",'/possessions/create'%><br /><br />
+<%=link_to "Delete", '/possessions/delete'%><br />

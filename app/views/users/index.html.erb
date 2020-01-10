@@ -1,0 +1,11 @@
+<h1>Possible Matches</h1>
+<h4><%=link_to "Log Out", logout_path%>  <%=link_to "Graveyard", graves_path%>  <%=link_to "Item List", items_path%>  <%=link_to "Your Inventory", possessions_path%></h4>
+<%@users.each do |user|%>
+    <ul>
+        <%if user != @you%>
+            <h1><%=link_to user.name, user_path(user)%></h1>
+            <li><%=user.gender%></li>
+            <li><%=user.status%></li>
+        <%end%>
+    </ul>
+<%end%>

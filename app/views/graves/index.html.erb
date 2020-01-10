@@ -1,0 +1,11 @@
+<h1>Graveyard</h1>
+<%=link_to "Back", users_path%><br /><br />
+<%@graves.each do |grave|%>
+    <%slayer = User.find(grave.slayer_id)%>
+    <%victim = User.find(grave.user_id)%>
+    <p>SLAYER: <%=slayer.name%></p><br />
+    <p>VICTIM: <%=victim.name%></p><br />
+    <p>-----------------------------------</p><br />
+<%end%>
+
+

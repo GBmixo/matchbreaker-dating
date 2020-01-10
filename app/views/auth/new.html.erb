@@ -1,0 +1,9 @@
+<h1>CREATE USER</h1>
+<p>Fill out this form.</p>
+
+    <%=form_for @user do |f|%>
+        Name: <%= f.text_field :name %><br />
+        Age: <%= f.text_field :age %><br />
+        Gender: <%= f.text_field :gender %><br />
+        <%=f.submit%>
+    <%end%>

@@ -1,0 +1,6 @@
+<h1>Make a new item</h1>
+<%=form_for @item do |f|%>
+    Power: <%= f.text_field :power %><br />
+    Speed: <%= f.text_field :speed %><br />
+    <%=f.submit%>
+<%end%>

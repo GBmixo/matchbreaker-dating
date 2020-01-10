@@ -1,0 +1,9 @@
+<h1>Inventory</h1>
+<%=link_to "Back", users_path%><br /><br />
+<%@possessions.each do |possess|%>
+        <%item = Item.find(possess.item_id)%>
+        Item <%=item.id%><br />
+        Power: <%=item.power%><br />
+        Speed: <%=item.speed%><br />
+        <br />
+<%end%>

@@ -1,0 +1,11 @@
+<h1><%=@user.name%></h1>
+
+Age: <%=@user.age%><br />
+Gender: <%=@user.gender%><br />
+HP: <%=@user.hp%><br />
+Relationship Status: <%=@user.status%><br /><br />
+
+<%=link_to "Back", users_path%><br /><br />
+<%if @user.status != "deceased"%>
+    <%=link_to "Fight",'/graves/create'%>
+<%end%>

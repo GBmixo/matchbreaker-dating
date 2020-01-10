@@ -1,0 +1,7 @@
+<h1>Items</h1>
+<%=link_to "Back", users_path%><br /><br />  <%=link_to "New Item", new_item_path%><br /><br /><br /><br />
+<%@items.each do |item|%>
+    <%=link_to "Item #{item.id}", item_path(item)%><br />
+    <br />
+    <br />
+<%end%>
